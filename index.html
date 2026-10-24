@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Track · Portfolio mentorship workspace</title>
+<meta name="description" content="A standalone, privacy-first workspace for tracking portfolio students, project progress, teaching hours and submission readiness.">
+<meta name="theme-color" content="#14160F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314160F'/%3E%3Cpath d='M18 42c4 4 24 4 24-6 0-8-18-4-18-12 0-8 16-8 20-4' stroke='%23CBF24C' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="brand">
+      <div class="mark">ST</div>
+      <div class="brand-txt">
+        <b>Studio Track</b>
+        <span>Mentorship OS</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <p class="nav-label">Workspace</p>
+      <a href="#/overview" data-route="overview"><svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z"/></svg>Overview</a>
+      <a href="#/learners" data-route="learners"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-7 2.2-7 5v1h14v-1c0-2.8-3-5-7-5Z"/></svg>Learners</a>
+      <a href="#/monthly" data-route="monthly"><svg viewBox="0 0 24 24"><path d="M7 2v2h10V2h2v2h2v18H3V4h2V2h2Zm12 8H5v10h14V10Z"/></svg>Monthly board</a>
+      <a href="#/insights" data-route="insights"><svg viewBox="0 0 24 24"><path d="M12 2 9.6 8.4 3 11l6.6 2.6L12 20l2.4-6.4L21 11l-6.6-2.6L12 2Z"/></svg>Insights</a>
+      <p class="nav-label">System</p>
+      <a href="#/data" data-route="data"><svg viewBox="0 0 24 24"><path d="M12 2c-4 0-7 1.3-7 3v14c0 1.7 3 3 7 3s7-1.3 7-3V5c0-1.7-3-3-7-3Zm0 2c3.3 0 5 .8 5 1s-1.7 1-5 1-5-.8-5-1 1.7-1 5-1Zm5 15c0 .2-1.7 1-5 1s-5-.8-5-1v-2.6c1.2.4 3 .6 5 .6s3.8-.2 5-.6V19Z"/></svg>Data &amp; AI</a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="privacy-dot"></div>
+      <div>
+        <b>Local-first</b>
+        <span>All records stay in this browser. Demo names are fictional.</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+      <div class="crumb" id="crumb">Overview</div>
+      <div class="top-actions">
+        <label class="month-pick">
+          <span>Month</span>
+          <select id="monthSelect"></select>
+        </label>
+        <button class="btn ghost" id="exportBtn" title="Export current data as JSON">
+          <svg viewBox="0 0 24 24"><path d="M12 3v10l3-3 1.4 1.4L12 16l-4.4-4.6L9 10l3 3V3h0ZM5 18h14v2H5z"/></svg>
+          Export
+        </button>
+        <button class="btn primary" id="quickLogBtn">
+          <svg viewBox="0 0 24 24"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></svg>
+          Log update
+        </button>
+      </div>
+    </header>
+
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+<div class="modal-root" id="modalRoot"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

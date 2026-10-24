@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Local data exports (may contain real student records)
+data-export-*.json
+*.local.json
+.env
+.env.*
+
+# Tooling
+node_modules/
+.cache/
