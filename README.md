@@ -4,6 +4,8 @@
 
 > Built as a self-contained static web app: four files of vanilla JavaScript, one JSON dataset, no build step. Drop it on GitHub Pages and it runs.
 
+**[▶ Live demo](https://yzhu690.github.io/studio-track/)** · every learner name in the demo dataset is a placeholder (the roster is synthetic), and all edits stay in your own browser.
+
 ![Overview](docs/overview.png)
 
 ---
